@@ -1255,7 +1255,7 @@ p {
   width: max-content;
   position: relative;
   animation: timelineScroll 35s linear infinite;
-  height: 35dvh;
+  height: 25dvh;
 }
 
 /* Infinite scroll */
