@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates & Badges | Dev Charan Sai P</title>
+    <meta name="description" content="Professional certifications and digital badges in AI/ML, Deep Learning, and Computer Vision">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&f[]=boska@400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" aria-label="Home">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="4" y="4" width="32" height="32" rx="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 20 L16 28 L20 12 L24 28 L28 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link active">Certificates</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Certificates & Badges</h1>
+                <p class="page-subtitle">Professional certifications and digital badges in AI/ML, Deep Learning, and Computer Vision</p>
+            </div>
+        </section>
+
+        <!-- Featured Certificates -->
+        <section class="featured-certs-section">
+            <div class="container">
+                <h2 class="section-title">Featured Credentials</h2>
+                <div class="featured-certs-grid" id="featured-certs-grid">
+                    <!-- Featured certificates will be dynamically inserted -->
+                </div>
+            </div>
+        </section>
+
+        <!-- All Certificates -->
+        <section class="all-certs-section">
+            <div class="container">
+                <h2 class="section-title">All Certificates</h2>
+                <div class="certs-grid" id="certs-grid">
+                    <!-- All certificates will be dynamically inserted -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Badges -->
+        <section class="badges-section">
+            <div class="container">
+                <h2 class="section-title">Digital Badges</h2>
+                <div class="badges-grid" id="badges-grid">
+                    <!-- Badges will be dynamically inserted -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Certificate Preview Modal -->
+    <div class="modal" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+        <div class="modal-backdrop" id="cert-modal-backdrop"></div>
+        <div class="modal-panel modal-panel--large">
+            <button class="modal-close" id="cert-modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="cert-modal-content">
+                <!-- Certificate preview will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 Dev Charan Sai P. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/dev-charan-sai-p-152938231" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/DevCharanSaiP" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:devcharansaip@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
