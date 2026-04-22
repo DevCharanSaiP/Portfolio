@@ -32,6 +32,7 @@
   --space-20: 5rem;
   --space-24: 6rem;
   --space-32: 8rem;
+  --space-64: 32rem;
 
   /* Font Families */
   --font-display: 'Boska', Georgia, serif;
@@ -1238,158 +1239,97 @@ p {
 }
 
 /* ===============================
-   FIXED LEADERSHIP TIMELINE
+   LEADERSHIP TIMELINE (Marquee Rail)
 ================================ */
 
-.timeline-wrapper {
-  /* border: 2px solid red; */
+.timeline-rail-wrapper {
   position: relative;
   overflow: hidden;
-  /* padding: var(--space-12) 0; */
+  padding-block: var(--space-8);
+  margin-inline: calc(-1 * var(--space-4)); /* Reaches edges of screen */
 }
 
-.timeline {
-  display: flex;
-  align-items: center;
-  gap: var(--space-16);
-  width: max-content;
-  position: relative;
-  animation: timelineScroll 35s linear infinite;
-  height: 25dvh;
-}
-
-/* Infinite scroll */
-@keyframes timelineScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* CENTER LINE */
-.timeline::before {
-  content: '';
+/* The continuous glowing line passing through the cards */
+.timeline-background-line {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--color-border);
+  background: var(--color-primary-glow);
   transform: translateY(-50%);
-  z-index: 0;
+  z-index: 1;
 }
 
-/* ITEM */
-.timeline-item {
-  position: relative;
-  flex-shrink: 0;
-  width: 260px;
+.timeline-rail {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: var(--space-6);
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  position: relative;
+  z-index: 2; /* Sits above the background line */
+  padding-right: var(--space-6);  
 }
 
-/* NODE */
-.timeline-marker {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 14px;
-  height: 14px;
-  background: var(--color-bg);
-  border: 3px solid var(--color-primary);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+.timeline-card:nth-child(5),
+.timeline-card:nth-child(10) {
+  margin-right: var(--space-64); /* You can change this to space-16 or space-32 to adjust the gap size */
 }
 
-/* GLOW NODE */
-.timeline-item--highlight .timeline-marker {
-  width: 20px;
-  height: 20px;
-  box-shadow: var(--shadow-glow);
+.timeline-rail:hover {
+  animation-play-state: paused;
 }
 
-/* CARD BASE */
-.timeline-content {
-  position: absolute;
-  width: 240px;
-  height: 150px;
+.timeline-card {
+  flex-shrink: 0;
+  width: 320px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
 }
 
-/* TOP ITEMS */
-.timeline-item:nth-child(odd) .timeline-content {
-  bottom: 60px;
-}
-
-/* BOTTOM ITEMS */
-.timeline-item:nth-child(even) .timeline-content {
-  top: 60px;
-}
-
-/* CONNECTOR LINE */
-.timeline-content::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  width: 2px;
-  height: 20px;
-  background: var(--color-border);
-  transform: translateX(-50%);
-}
-
-.timeline-item:nth-child(odd) .timeline-content::after {
-  bottom: -20px;
-}
-
-.timeline-item:nth-child(even) .timeline-content::after {
-  top: -20px;
-}
-
-/* HOVER */
-.timeline-content:hover {
+.timeline-card:hover {
   border-color: var(--color-edge-glow);
   box-shadow: var(--shadow-glow);
   transform: translateY(-4px);
 }
 
-/* TEXT */
-.timeline-content h4 {
-  font-size: var(--text-sm);
-  margin-bottom: var(--space-1);
+/* Highlighted specific roles (e.g., President) */
+.timeline-card--highlight {
+  border-color: var(--color-primary);
+  background: var(--color-surface-2);
 }
 
-.timeline-date {
+.timeline-card h4 {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.timeline-card .timeline-date {
+  display: inline-block;
   font-size: var(--text-xs);
   color: var(--color-primary);
-  margin-bottom: var(--space-1);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.timeline-content p {
-  font-size: var(--text-xs);
+.timeline-card p {
+  font-size: var(--text-sm);
   color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.6;
 }
 
-/* MOBILE FALLBACK */
 @media (max-width: 768px) {
-  .timeline {
-    animation: none;
-  }
-
-  .timeline-content {
-    position: relative;
-    top: auto !important;
-    bottom: auto !important;
-  }
-
-  .timeline::before {
-    display: none;
-  }
-
-  .timeline-marker {
-    display: none;
+  .timeline-card {
+    width: 280px; /* Slightly smaller cards on mobile */
   }
 }
 
