@@ -18,7 +18,7 @@ const featuredProjects = [
     tags: ['llm', 'agentic-ai', 'gen-ai', 'deployed'],
     tech: 'Python, Gradio, LLaMA 3, Hugging Face',
     links: {
-      github: 'https://github.com/DevCharanSaiP/techstack-advisoryagent',
+      github: 'https://github.com/DevCharanSaiP/techstack-advisory_agent',
       demo: 'https://huggingface.co/spaces/devcharansaip/tech-stackadvisor'
     }
   },
@@ -92,7 +92,7 @@ const allProjects = {
       tags: ['deep-learning', 'machine-learning'],
       tech: 'Python, TensorFlow, Keras, NumPy, Pandas, Scikit-learn',
       links: {
-        github: 'https://github.com/DevCharanSaiP/Human-Activity-Recognition2D-CNN'
+        github: 'https://github.com/DevCharanSaiP/Human-Activity-Recognition_2D-CNN'
       }
     },
     {
@@ -156,7 +156,7 @@ const allProjects = {
       tags: ['llm', 'agentic-ai', 'gen-ai', 'deployed'],
       tech: 'Python, Gradio, Hugging Face Transformers, HTML/CSS',
       links: {
-        github: 'https://github.com/DevCharanSaiP/spellbook-agent',
+        github: 'https://github.com/DevCharanSaiP/spellbook_agent',
         demo: 'https://huggingface.co/spaces/devcharansaip/spellbook_agent'
       }
     },
@@ -170,7 +170,7 @@ const allProjects = {
       tags: ['llm', 'agentic-ai', 'gen-ai', 'deployed'],
       tech: 'Python, Gradio, LLaMA 3, Hugging Face, HTML/CSS',
       links: {
-        github: 'https://github.com/DevCharanSaiP/techstack-advisoryagent',
+        github: 'https://github.com/DevCharanSaiP/techstack-advisory_agent',
         demo: 'https://huggingface.co/spaces/devcharansaip/tech-stackadvisor'
       }
     },
